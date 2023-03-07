@@ -20,23 +20,17 @@ class CommentsApp extends StatelessWidget {
         BlocProvider(
             create: (context) =>
                 di.sl<CommentsBloc>()..add(GetAllCommentsEvent())),
-        BlocProvider(create: (context) => di.sl<AddUpdDelBloc>())
+        BlocProvider(create: (context) => di.sl<AddUpdDelBloc>()),
       ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: ScreenUtilInit(
-          designSize: const Size(392.72727272727275, 781.0909090909091),
-          minTextAdapt: true,
-          splitScreenMode: true,
-          builder: ((context, child) => MaterialApp(
-              title: 'Posts App',
-              debugShowCheckedModeBanner: true,
-              theme: appTheme(),
-              home: const CommentsPage())),
-        ),
+      child: ScreenUtilInit(
+        designSize: const Size(392.72727272727275, 781.0909090909091),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: ((context, child) => MaterialApp(
+            title: 'Posts App',
+            debugShowCheckedModeBanner: true,
+            theme: MyThemes.orangeTheme,
+            home: const CommentsPage())),
       ),
     );
   }

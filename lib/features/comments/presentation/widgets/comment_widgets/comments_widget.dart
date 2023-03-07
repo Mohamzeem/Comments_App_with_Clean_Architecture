@@ -48,7 +48,7 @@ class CommentsListWidget extends StatelessWidget {
         },
         separatorBuilder: (context, index) => const Divider(
           height: 10,
-          color: AppColors.kPrimary,
+          // color: AppColors.kPrimary,
           thickness: 1,
         ),
       ),

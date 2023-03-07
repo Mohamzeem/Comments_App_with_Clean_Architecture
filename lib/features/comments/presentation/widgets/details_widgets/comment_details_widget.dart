@@ -28,14 +28,18 @@ class CommentDetailsWidget extends StatelessWidget {
                 fontSize: 18,
                 fontWeight: FontWeight.w900),
             const Divider(
-                height: 20, thickness: 0.8, color: AppColors.kPrimary),
+              height: 20,
+              thickness: 0.8,
+            ),
             CustomTextWidget(
                 text: comment.email,
                 color: AppColors.kBlack,
                 fontSize: 18,
                 fontWeight: FontWeight.w600),
             const Divider(
-                height: 20, thickness: 0.8, color: AppColors.kPrimary),
+              height: 20,
+              thickness: 0.8,
+            ),
             CustomTextWidget(
                 text: comment.body,
                 color: AppColors.kGray,

@@ -19,7 +19,7 @@ class AddUpdButton extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
           minimumSize: Size(105.w, 35.h),
-          backgroundColor: AppColors.kPrimary,
+          // backgroundColor: AppColors.kPrimary,
           elevation: 10),
       icon: Icon(isupdate ? Icons.edit : Icons.add),
       label: CustomTextWidget(

@@ -6,11 +6,12 @@ import '../../domain/entities/comment.dart';
 import '../widgets/details_widgets/comment_details_widget.dart';
 
 class CommentDetailsPage extends StatelessWidget {
+  final Comment comment;
   const CommentDetailsPage({
     Key? key,
     required this.comment,
   }) : super(key: key);
-  final Comment comment;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

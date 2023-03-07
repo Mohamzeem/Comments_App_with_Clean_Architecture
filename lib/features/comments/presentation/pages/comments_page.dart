@@ -8,14 +8,9 @@ import '../widgets/comment_widgets/comments_widget.dart';
 import '../widgets/comment_widgets/message_display_widget.dart';
 import 'add_update_comment_page.dart';
 
-class CommentsPage extends StatefulWidget {
+class CommentsPage extends StatelessWidget {
   const CommentsPage({super.key});
 
-  @override
-  State<CommentsPage> createState() => _CommentsPageState();
-}
-
-class _CommentsPageState extends State<CommentsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,8 +34,7 @@ FloatingActionButton _floatingActionBtn(BuildContext context) =>
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) =>
-                      const AddUpdateCommentPage(isUpdate: false)));
+                  builder: (_) => const AddUpdateCommentPage(isUpdate: false)));
         },
         child: const Icon(
           Icons.add,

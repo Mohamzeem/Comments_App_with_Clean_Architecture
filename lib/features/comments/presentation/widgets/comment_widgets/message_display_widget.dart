@@ -4,11 +4,11 @@ import '../../../../../config/widgets/custom_text_widget.dart';
 import '../../../../../core/consts/app_colors.dart';
 
 class MessageDisplayWidget extends StatelessWidget {
+  final String message;
   const MessageDisplayWidget({
     Key? key,
     required this.message,
   }) : super(key: key);
-  final String message;
 
   @override
   Widget build(BuildContext context) {

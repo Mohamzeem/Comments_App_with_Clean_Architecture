@@ -1,19 +1,19 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../config/widgets/custom_elevated_button.dart';
 import '../../../../../config/widgets/custom_text_from_field.dart';
 import '../../../domain/entities/comment.dart';
 import '../../bloc/add_upd_del_bloc/add_upd_del_bloc.dart';
+import 'add_upd_button.dart';
 
 class FormWidget extends StatefulWidget {
+  final Comment? comment;
+  final bool isUpdate;
   const FormWidget({
     Key? key,
     this.comment,
     required this.isUpdate,
   }) : super(key: key);
-  final Comment? comment;
-  final bool isUpdate;
 
   @override
   State<FormWidget> createState() => _FormWidgetState();
@@ -72,7 +72,7 @@ class _FormWidgetState extends State<FormWidget> {
                     maxLines: 10,
                     hintText: 'Content'),
               ),
-              CustomElevatedBtnWidget(
+              AddUpdButton(
                   onPressed: validateAddOrUpdate, isupdate: widget.isUpdate)
             ],
           ),

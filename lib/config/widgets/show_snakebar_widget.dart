@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../config/widgets/custom_text_widget.dart';
-import '../consts/app_colors.dart';
+import 'custom_text_widget.dart';
+import '../../core/consts/app_colors.dart';
 
 class ShowSnackBar {
   void showSuccessSnackBar(

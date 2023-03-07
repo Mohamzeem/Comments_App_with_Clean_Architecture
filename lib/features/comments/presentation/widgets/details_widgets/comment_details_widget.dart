@@ -7,11 +7,12 @@ import '../../../domain/entities/comment.dart';
 import 'delete_button.dart';
 
 class CommentDetailsWidget extends StatelessWidget {
+  final Comment comment;
   const CommentDetailsWidget({
     Key? key,
     required this.comment,
   }) : super(key: key);
-  final Comment comment;
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -41,7 +42,7 @@ class CommentDetailsWidget extends StatelessWidget {
                 fontSize: 18,
                 fontWeight: FontWeight.w400),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 UpdateButtonWidget(comment: comment),
                 DeleteButtonWidget(id: comment.id!)

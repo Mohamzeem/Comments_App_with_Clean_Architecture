@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../config/widgets/custom_loading_widget.dart';
 import '../../../../../config/widgets/custom_text_widget.dart';
 import '../../../../../core/consts/app_colors.dart';
-import '../../../../../core/widgets/show_snakebar_widget.dart';
+import '../../../../../config/widgets/show_snakebar_widget.dart';
 import '../../bloc/add_upd_del_bloc/add_upd_del_bloc.dart';
 import '../../pages/comments_page.dart';
 import 'delete_dialog_widget.dart';
@@ -21,16 +21,16 @@ class DeleteButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
       onPressed: () => deleteDialog(context, id),
-      style: ElevatedButton.styleFrom(
-          minimumSize: Size(105.w, 35.h),
-          backgroundColor: AppColors.kRed,
-          elevation: 10),
       icon: const Icon(Icons.delete),
       label: const CustomTextWidget(
           text: 'Delete',
           color: AppColors.kWhite,
           fontSize: 16,
           fontWeight: FontWeight.w600),
+      style: ElevatedButton.styleFrom(
+          minimumSize: Size(105.w, 35.h),
+          backgroundColor: AppColors.kRed,
+          elevation: 10),
     );
   }
 
@@ -59,8 +59,9 @@ class DeleteButtonWidget extends StatelessWidget {
                 return const AlertDialog(
                   title: LoadingWidget(),
                 );
+              } else {
+                return DeleteDialogWidget(id: id);
               }
-              return DeleteDialogWidget(id: id);
             },
           );
         });

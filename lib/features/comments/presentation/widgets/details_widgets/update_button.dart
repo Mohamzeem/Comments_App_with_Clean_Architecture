@@ -7,12 +7,11 @@ import '../../../domain/entities/comment.dart';
 import '../../pages/add_update_comment_page.dart';
 
 class UpdateButtonWidget extends StatelessWidget {
+  final Comment comment;
   const UpdateButtonWidget({
     Key? key,
     required this.comment,
   }) : super(key: key);
-
-  final Comment comment;
 
   @override
   Widget build(BuildContext context) {
@@ -25,16 +24,16 @@ class UpdateButtonWidget extends StatelessWidget {
               comment: comment,
             ),
           )),
-      style: ElevatedButton.styleFrom(
-          minimumSize: Size(105.w, 35.h),
-          backgroundColor: AppColors.kGreen,
-          elevation: 10),
       icon: const Icon(Icons.edit),
       label: const CustomTextWidget(
           text: 'Edit',
           color: AppColors.kWhite,
           fontSize: 16,
           fontWeight: FontWeight.w600),
+      style: ElevatedButton.styleFrom(
+          minimumSize: Size(105.w, 35.h),
+          backgroundColor: AppColors.kGreen,
+          elevation: 10),
     );
   }
 }

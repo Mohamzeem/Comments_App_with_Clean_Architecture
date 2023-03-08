@@ -1,3 +1,4 @@
+import 'package:comments_with_clean_architecture/features/splash/presentation/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,8 +9,8 @@ import 'features/comments/presentation/bloc/comments_bloc/comments_bloc.dart';
 import 'features/comments/presentation/pages/comments_page.dart';
 import 'injection_container.dart' as di;
 
-class CommentsApp extends StatelessWidget {
-  const CommentsApp({super.key});
+class AppPage extends StatelessWidget {
+  const AppPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class CommentsApp extends StatelessWidget {
             title: 'Posts App',
             debugShowCheckedModeBanner: true,
             theme: MyThemes.orangeTheme,
-            home: const CommentsPage())),
+            home: const SplashScreen())),
       ),
     );
   }

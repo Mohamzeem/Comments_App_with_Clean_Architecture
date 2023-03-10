@@ -6,15 +6,13 @@ class LoadingWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SizedBox(
-          height: 30.h,
-          width: 30.w,
-          child: const CircularProgressIndicator(
-            // color: AppColors.kPrimary,
-            semanticsLabel: 'Loading..',
-          ),
+    return Center(
+      child: SizedBox(
+        height: 30.h,
+        width: 30.w,
+        child: const CircularProgressIndicator(
+          // color: AppColors.kPrimary,
+          semanticsLabel: 'Loading..',
         ),
       ),
     );

@@ -6,7 +6,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'config/themes/app_theme.dart';
 import 'features/comments/presentation/bloc/add_upd_del_bloc/add_upd_del_bloc.dart';
 import 'features/comments/presentation/bloc/comments_bloc/comments_bloc.dart';
-import 'features/comments/presentation/pages/comments_page.dart';
 import 'injection_container.dart' as di;
 
 class AppPage extends StatelessWidget {

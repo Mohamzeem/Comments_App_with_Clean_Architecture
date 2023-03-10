@@ -27,10 +27,10 @@ class UpdateCommentEvent extends AddUpdDelBlocEvent {
 }
 
 class DeleteCommentEvent extends AddUpdDelBlocEvent {
-  final int postId;
+  final int id;
   const DeleteCommentEvent({
-    required this.postId,
+    required this.id,
   });
   @override
-  List<Object> get props => [postId];
+  List<Object> get props => [id];
 }

@@ -16,21 +16,3 @@ class Comment extends Equatable {
   @override
   List<Object?> get props => [id, name, body, email];
 }
-
-
-
-// class Comment extends Equatable {
-  // final int id;
-  // final String username;
-  // final String body;
-  // final int postId;
-
-//   const Comment(
-//       {required this.id,
-//       required this.username,
-//       required this.body,
-//       required this.postId});
-
-//   @override
-//   List<Object?> get props => [id, username, body, postId];
-// }

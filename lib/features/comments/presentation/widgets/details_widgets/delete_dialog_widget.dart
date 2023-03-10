@@ -21,7 +21,7 @@ class DeleteDialogWidget extends StatelessWidget {
             child: const Text('No')),
         TextButton(
             onPressed: () => BlocProvider.of<AddUpdDelBloc>(context)
-                .add(DeleteCommentEvent(postId: id)),
+                .add(DeleteCommentEvent(id: id)),
             child: const Text('Yes')),
       ],
       title: const CustomTextWidget(

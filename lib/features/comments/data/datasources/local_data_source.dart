@@ -18,7 +18,7 @@ class LocalDataSourceImpl implements LocalDataSource {
   });
   @override
   Future<List<CommentModel>> getSavedComments() {
-    final jsonString = sharedPreferences.getString(AppStrings.savedPosts);
+    final jsonString = sharedPreferences.getString(AppStrings.savedComments);
     if (jsonString != null) {
       List decodeJsonData = json.decode(jsonString);
       List<CommentModel> jsonToCommentModel = decodeJsonData
@@ -36,7 +36,7 @@ class LocalDataSourceImpl implements LocalDataSource {
         .map<Map<String, dynamic>>((commentModel) => commentModel.toJson())
         .toList();
     sharedPreferences.setString(
-        AppStrings.savedPosts, json.encode(commentModelToJson));
+        AppStrings.savedComments, json.encode(commentModelToJson));
     return Future.value(unit);
   }
 }

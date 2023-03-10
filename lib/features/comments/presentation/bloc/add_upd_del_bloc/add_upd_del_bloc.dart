@@ -36,8 +36,7 @@ class AddUpdDelBloc extends Bloc<AddUpdDelBlocEvent, AddUpdDelState> {
             failureOrSuccessComment, AppMessages.UPDATE_SUCCESS_MESSAGE));
       } else if (event is DeleteCommentEvent) {
         emit(AddUpdDelLoadingState());
-        final failureOrSuccessComment =
-            await deleteCommentUseCase(event.postId);
+        final failureOrSuccessComment = await deleteCommentUseCase(event.id);
         emit(_eitherSuccessOrFailedMsg(
             failureOrSuccessComment, AppMessages.DELETE_SUCCESS_MESSAGE));
       }

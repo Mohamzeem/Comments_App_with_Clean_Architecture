@@ -29,7 +29,7 @@ class AddUpdateCommentPage extends StatelessWidget {
   AppBar _appBar() {
     return AppBar(
       title: CustomTextWidget(
-          text: isUpdate ? 'Edit Post' : 'Add Post',
+          text: isUpdate ? 'Edit Comment' : 'Add Comment',
           color: AppColors.kWhite,
           fontSize: 25,
           fontWeight: FontWeight.w600),
